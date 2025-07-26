@@ -1,5 +1,5 @@
 {
-  "name": "slide-of-nextjs-agetic-coding-2025",
+  "name": "slide-of-nextjs-agentic-coding-2025",
   "type": "module",
   "private": true,
   "scripts": {
@@ -8,9 +8,13 @@
     "export": "slidev export"
   },
   "dependencies": {
-    "@slidev/cli": "^52.0.0",
-    "@slidev/theme-default": "latest",
-    "@slidev/theme-seriph": "latest",
-    "vue": "^3.5.17"
+    "@slidev/cli": "52.0.0",
+    "@slidev/theme-default": "0.25.0",
+    "@slidev/theme-seriph": "0.25.0",
+    "vue": "3.5.17"
+  },
+  "devDependencies": {
+    "prettier": "3.6.2",
+    "prettier-plugin-slidev": "1.0.5"
   }
 }
