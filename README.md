@@ -1,11 +1,9 @@
-# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
+# Slide of Next.js Agentic Coding - 2025
 
-To start the slide show:
+## Slide
 
-- `pnpm install`
-- `pnpm dev`
-- visit <http://localhost:3030>
+- [slides.md](./slides.md)
 
-Edit the [slides.md](./slides.md) to see the changes.
+## Event
 
-Learn more about Slidev at the [documentation](https://sli.dev/).
+TBW(Findy)
