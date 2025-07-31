@@ -39,34 +39,34 @@ in Findy's event 202508
 ```
 
 ---
-layout: section
----
 
-## 「AIによる開発効率の向上」、できてますか？
+# テーマ: 『実践Next.js』 with AI
 
----
-layout: section
----
+AI時代における、Next.jsの開発のあり方について
 
-## Next.jsの開発においても<br>AI Agentの活用は非常に重要
-
----
-
-# Theme: Next.jsのAgentic Codingを最大化する
-
-僕が実際に実践してるTipsや知見を紹介
-
-1. 適切に設計された静的解析と単体テスト
-2. [Next.jsの考え方](https://zenn.dev/akfm/books/nextjs-basic-principle)に沿って実装されたリファレンス実装
-3. <span class="font-bold" v-mark="{ at: 1, color: 'red', type: 'underline' }">AI Agentが『Next.jsの考え方』を都度参照するようなルール設定</span>
-
-※[Zennの記事](https://zenn.dev/akfm/articles/agent-read-the-nextjs-way)とある程度内容が重複します
+- 今日話すこと
+  - Next.js×AI駆動開発の実践的なテクニック
+    - 参考: [AI Agentのアウトプットに『Next.jsの考え方』を反映するプラクティス](https://zenn.dev/akfm/articles/agent-read-the-nextjs-way)
+  - 僕の普段の開発の進め方
+- 今日話さないこと
+  - 『Next.jsの考え方』にある内容
+  - Next.jsの最新動向
 
 ---
 layout: section
 ---
 
-# Next.jsに限らない<br>AI Agentを活かす工夫
+# 前提条件
+
+技術やツールの選定
+
+---
+
+# Next.js以外の技術選定
+
+僕が必須で利用してる技術
+
+TBW
 
 ---
 
@@ -76,6 +76,14 @@ AIツールに関しては以下を利用して検証しました
 
 - AI Agent: Claude Code, Cursor
 - AI Model: Claude 4 Sonnet
+
+---
+layout: section
+---
+
+# AI Agentの特性
+
+使いこなす上で意識すべき点
 
 ---
 
@@ -93,7 +101,9 @@ TBW
 layout: section
 ---
 
-# Next.jsにおける<br>AI Agentを活かす工夫
+# Next.jsに長けた<br>AI Agentを作り込む
+
+フレームワーク特化なAgentをどう育てるか
 
 ---
 
