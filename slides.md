@@ -40,13 +40,12 @@ in Findy's event 202508
 
 ---
 
-# テーマ: 『実践Next.js』 with AI
+# テーマ: AI Agent時代の『実践Next.js』
 
-AI時代における、Next.jsの開発のあり方について
+AI Agent時代における、Next.jsの開発のあり方について
 
 - 今日話すこと
   - Next.js×AI駆動開発の実践的なテクニック
-    - 参考: [AI Agentのアウトプットに『Next.jsの考え方』を反映するプラクティス](https://zenn.dev/akfm/articles/agent-read-the-nextjs-way)
   - 僕の普段の開発の進め方
 - 今日話さないこと
   - 『Next.jsの考え方』にある内容
@@ -58,21 +57,29 @@ layout: section
 
 # 前提条件
 
-技術やツールの選定
+周辺技術やツール
 
 ---
 
-# Next.js以外の技術選定
+# Next.jsの周辺技術
 
-僕が必須で利用してる技術
+僕がよく採用する周辺技術
 
-TBW
+- Storybook: Client Components/Shared ComponentsのUIをテスト
+- vitest: Server Componentsをテスト
+- Biome: Pluginなどは未採用
+- その他ライブラリ（主題にはあまり関係ない）
+  - zod
+  - conform, react-hook-form
+  - DataLoader
+  - turborepo
+  - ...
 
 ---
 
-# 利用するツールやモデル
+# AIツールとモデル
 
-AIツールに関しては以下を利用して検証しました
+僕がよく採用するAIツールとモデル
 
 - AI Agent: Claude Code, Cursor
 - AI Model: Claude 4 Sonnet
