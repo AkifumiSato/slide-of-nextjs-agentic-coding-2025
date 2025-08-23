@@ -1,6 +1,6 @@
 ---
 theme: default
-background: https://images.unsplash.com/photo-1735948055457-8d816fb80a87?q=80&w=2371&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+background: https://images.unsplash.com/photo-1679362003950-8f3e1931554e?q=80&w=2428&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 class: text-center
 highlighter: shiki
 lineNumbers: false
@@ -8,11 +8,11 @@ colorSchema: "dark"
 drawings:
   persist: false
 transition: slide-left
-title: Next.jsのAgentic Codingを最大化する
+title: Next.jsとAgentic Coding
 mdc: true
 ---
 
-# Next.jsと<br>Agentic Codingの最大化
+# Next.jsと<br>Agentic Coding
 
 in Findy's event 202508
 
@@ -37,18 +37,6 @@ in Findy's event 202508
   },
 }
 ```
-
----
-layout: statement
----
-
-## みなさん、AI使ってますか？
-
----
-layout: statement
----
-
-## AIで生産性、向上してますか？
 
 ---
 
@@ -80,6 +68,8 @@ layout: section
 主題に入る前にNext.jsとAIに関して知っておきたいこと
 
 ---
+transition: fade
+---
 
 # AI時代におけるVercel Inc.の戦略
 
@@ -87,15 +77,30 @@ Next.jsを中心とした全方位戦略
 
 - _**Next.js**_: 人気なフレームワーク=AIも生成しやすい
 - _**Vercel**_: Next.jsを最も容易にデプロイできるプラットフォーム
-- _**v0.dev**_: Next.jsやVercelと強く統合されたAIプラットフォーム
+- _**v0.app/v0.dev**_: Next.jsやVercelと強く統合されたAIプラットフォーム
 
 参考: Vercel社員の上杉さんが出演した[Qiita FM](https://corp.qiita.com/releases/2025/03/podcast-uesugi/)
 
 ---
-layout: statement
+
+# AI時代におけるVercel Inc.の戦略
+
+Next.jsを中心とした全方位戦略
+
+- Vercelは早い段階で「これからはAI」と言い切ってた
+- VercelのAIプロダクト=`v0.app`
+- `v0.app`はNext.jsと強く統合されてる
+
+<span class="font-bold" v-mark="{ color: 'red', type: 'underline' }">VercelのAI戦略はNext.jsの人気の上に成り立ってる</span>
+
 ---
 
-## 「Next.jsとAIの統合」はVercel Inc.にとっても<br>非常に重要なテーマ
+# Next.jsはAIと親和性が高い？
+
+AIの特性とVercelの戦略から考察
+
+- 人気なフレームワークはAIの学習データも豊富
+- `v0.app`と統合するため、AIフレンドリーな設計や機能の需要が高い
 
 ---
 
@@ -103,23 +108,15 @@ layout: statement
 
 まだまだAI時代黎明期
 
-- v0.devによりプロトタイプ開発は超高速に
-  - Vercelの戦略には妥当性を感じる
-- 中規模以上の開発、保守は難しい
-  - 工夫次第で生産性の幅は大きく変わる
-  - Next.jsもAIとの統合を意識した機能開発が盛んになりつつある段階
+- 初期構築: `v0.app`により非常に高速になった
+- 既存アプリケーション・スケール: `v0.app`のスコープ外
+  - Calude Codeなど3rd partyなAIツールを使うのがベスト
 
 ---
 layout: statement
 ---
 
-## Next.jsとAIの生産性は、現状開発者の工夫次第
-
----
-layout: statement
----
-
-## じゃあ何を工夫すればいいのか？
+## Next.jsでAI駆動開発するには、まだまだ工夫が必要
 
 ---
 layout: section
@@ -136,7 +133,7 @@ layout: section
 僕が普段重要だと考えてるプラクティス4つ
 
 1. 最適なツール・モデル選び
-1. 適切に設計された静的解析とテスト
+1. AIへのフィードバックサイクル
 1. 『Next.jsの考え方』に沿った実装
 1. 『Next.jsの考え方』をAgentに都度読ませるルール
 
@@ -147,26 +144,28 @@ layout: section
 僕がよく採用するAIツールとモデル
 
 - プロトタイプ開発
-  - v0.dev
+  - `v0.app`
 - 中規模以上の開発や保守
   - Claude Code
   - Cursor(`claude-4-sonnet`)
 
 ---
 
-# 適切に設計された静的解析とテスト
+# AIへのフィードバックサイクル
 
-AIがフィードバックサイクルを回すために必須
+適切に設計された静的解析とテスト
 
-- 静的解析: Lintや型チェックは当然必須
-- 単体テスト: 緻密に設計したテスト設計が重要
+- 静的解析
+  - `tsgo`
+  - biome
+- 単体テスト
   - [フロントエンドにおける「単体テストの考え方/使い方」](https://zenn.dev/akfm/articles/frontend-unit-testing)
   - [`@akfm/test-utils`](https://www.npmjs.com/package/@akfm/test-utils)などの活用
-- Storybook: Storyを確認できる環境の整備
-  - [Test Runner](https://storybook.js.org/docs/writing-tests/integrations/test-runner)
+- Storybook
+  - Test Runner
   - [`@akfm/storybook-mcp`](https://www.npmjs.com/package/@akfm/storybook-mcp)でStoryの状態を都度確認
-- 開発中: ログを確認できる環境の整備
-  - [playwright-mcp](https://github.com/microsoft/playwright-mcp)
+- MCP/AI接続
+  - playwright-mcp、Serena
   - [`browserDebugInfoInTerminal`](https://x.com/cramforce/status/1944885314750963827)フラグ
 
 ---
@@ -190,6 +189,7 @@ AIも人も、参考コードのあるなしで精度が大きく変わる
 - publicリポジトリから『Next.jsの考え方』のマークダウンをコピーして配置
 - 都度必要な章を読み込むよう[ルールに設定](https://github.com/AkifumiSato/akfm-nextjs-rules-demo/blob/main/CLAUDE.md)
   - 内容を圧縮してルールに設定すると精度が落ちる
+  - ルール記述後にSerenaのOnboardingすると精度向上
 
 ---
 layout: section
@@ -224,10 +224,12 @@ AI Agentの工夫による恩恵の体感値
 
 LLMは厳密な検証が難しいため、定性評価
 
-- アプリケーションにもよるが、体感5~7割くらいAI Agentに任せられる
-- AI自体はもちろん、Next.jsとAIの統合はこれからもっと進化していく
-- 普段から自分が重要だと思う価値観を技術記事などにアウトプットしておくことで、AIにも伝えやすい
+- アプリケーションにもよるが、体感5~7割くらいAI Agentにドライバーを任せられる
+- Next.jsはこれからもAIフレンドリーなフレームワークとして進化してくと思う
+- 自分の学んだことや思想をアウトプットしておくと、AIにも伝えやすい
 
+---
+layout: section
 ---
 
 # End
